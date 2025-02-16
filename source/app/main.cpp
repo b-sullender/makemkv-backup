@@ -16,7 +16,7 @@
 #include <sys/ioctl.h>
 #include <linux/cdrom.h>
 
-#include "../lib/makemkvcon.h"
+#include "../lib/makemkv-backup.h"
 
 #define OUTPUT_BUFFER_SIZE 4096
 

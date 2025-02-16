@@ -1,0 +1,12 @@
+Source: makemkv-backup
+Section: utils
+Priority: optional
+Maintainer: Brian Sullender <b.sullender@gmail.com>
+Build-Depends: build-essential, pkg-config, qtbase5-dev
+Standards-Version: 4.6.2.0
+Homepage: https://github.com/b-sullender/makemkv-backup/
+
+Package: makemkv-backup
+Architecture: any
+Depends: ${shlibs:Depends}
+Description: Automate backing up DVD/Blu-ray with MakeMKV

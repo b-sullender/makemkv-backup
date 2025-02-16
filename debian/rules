@@ -1,0 +1,16 @@
+#!/usr/bin/make -f
+
+%:
+	dh $@
+
+override_dh_auto_build:
+	mkdir build
+	cd build && cmake ..
+	cd build && $(MAKE)
+
+override_dh_auto_install:
+	cd build && $(MAKE) DESTDIR=$(CURDIR)/debian/makemkv-backup/ install
+	
+	dpkg-shlibdeps -O \
+	-e debian/makemkv-backup/usr/bin/makemkv-backup \
+	-e debian/makemkv-backup/usr/lib/libmakemkvbackup.so
