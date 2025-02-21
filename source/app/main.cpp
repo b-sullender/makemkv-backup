@@ -63,6 +63,12 @@ void ejectTray(const char *device) {
         return;
     }
 
+    // Stop the disc
+    if (ioctl(cdrom_fd, CDROMSTOP) < 0) {
+        perror("Failed to stop the disc");
+    }
+    sleep(2); // Give it a moment to stop
+
     // Unlock the tray
     if (ioctl(cdrom_fd, CDROM_LOCKDOOR, 0) < 0) {
         perror("Failed to unlock tray");

@@ -11,7 +11,7 @@ sudo make install
 
 # Run MakeMKV backup
 ```shell
-./makemkv-auto --device=/dev/sr0 --path="/output/path"
+./makemkv-backup --device=/dev/sr0 --path="/output/path"
 ```
 
 # Building Debian Package
